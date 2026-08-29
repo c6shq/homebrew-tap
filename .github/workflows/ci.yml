@@ -43,3 +43,7 @@ jobs:
       - run: brew install --cask c6shq/tap/cerberus
       - run: codesign --verify --deep --strict --verbose=2 /Applications/Cerberus.app
       - run: xcrun stapler validate /Applications/Cerberus.app
+      - run: brew audit --cask --strict --online c6shq/tap/cerberus@beta
+      - run: brew install --cask c6shq/tap/cerberus@beta
+      - run: codesign --verify --deep --strict --verbose=2 '/Applications/Cerberus Beta.app'
+      - run: xcrun stapler validate '/Applications/Cerberus Beta.app'

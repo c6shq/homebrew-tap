@@ -42,17 +42,22 @@ published SHA-256 checksum before installing the executable.
 | Formula | [`c6s`](Formula/c6s.rb) | Apple Silicon macOS CLI |
 | Formula | [`c6s-beta`](Formula/c6s-beta.rb) | Concurrent CLI beta |
 | Cask | [`cerberus`](Casks/cerberus.rb) | Universal macOS 14+ native app |
-
-The native beta Cask token is reserved as `cerberus@beta`; it is published only when
-a distinct `Cerberus Beta.app` artifact passes Developer ID signing, notarization,
-login, upgrade, and uninstall checks. Local developers use the private desktop
-repository's `scripts/install-dev.sh` instead.
+| Cask | [`cerberus@beta`](Casks/cerberus@beta.rb) | Concurrent macOS beta |
 
 Install the Developer ID-signed and Apple-notarized native app with:
 
 ```sh
 brew install --cask c6shq/tap/cerberus
 ```
+
+Install the independently signed and notarized beta beside it with:
+
+```sh
+brew install --cask c6shq/tap/cerberus@beta
+```
+
+Local developers use the private desktop repository's `scripts/install-dev.sh` for
+the separate `Cerberus Dev.app` identity.
 
 ## Release boundary
 
