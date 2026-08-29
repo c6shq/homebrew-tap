@@ -10,7 +10,7 @@ cask "cerberus" do
   livecheck do
     url :url
     regex(/^cerberus[._-]v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
+    strategy :github_releases
   end
 
   depends_on macos: :sonoma
