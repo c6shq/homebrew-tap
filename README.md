@@ -30,10 +30,13 @@ published SHA-256 checksum before installing the executable.
 | Type | Token | Status |
 | --- | --- | --- |
 | Formula | [`c6s`](Formula/c6s.rb) | Apple Silicon macOS CLI |
-| Cask | `cerberus` | Planned after the native app is signed, notarized, and released |
+| Cask | [`cerberus`](Casks/cerberus.rb) | Universal macOS 14+ native app |
 
-A Cask is deliberately not simulated with the CLI archive. `brew install --cask
-c6shq/tap/cerberus` will be introduced with the signed Cerberus `.app` release.
+Install the Developer ID-signed and Apple-notarized native app with:
+
+```sh
+brew install --cask c6shq/tap/cerberus
+```
 
 ## Release boundary
 

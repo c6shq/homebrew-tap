@@ -24,7 +24,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: brew test-bot --only-tap-syntax
 
-  formula:
+  packages:
     if: github.event_name != 'pull_request'
     runs-on: macos-15
     timeout-minutes: 15
@@ -36,3 +36,7 @@ jobs:
       - run: brew audit --strict --online c6shq/tap/c6s
       - run: brew install c6shq/tap/c6s
       - run: brew test c6shq/tap/c6s
+      - run: brew audit --cask --strict --online c6shq/tap/cerberus
+      - run: brew install --cask c6shq/tap/cerberus
+      - run: codesign --verify --deep --strict --verbose=2 /Applications/Cerberus.app
+      - run: xcrun stapler validate /Applications/Cerberus.app
