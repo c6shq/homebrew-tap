@@ -16,6 +16,16 @@ brew install c6shq/tap/c6s
 The fully qualified name makes Homebrew trust only the selected Formula. Upgrades and
 removal then use `brew upgrade c6s` and `brew uninstall c6s`.
 
+Install the concurrently usable pre-release CLI as `c6s-beta`:
+
+```sh
+brew install c6shq/tap/c6s@beta
+```
+
+The two Formulae use separate executable names, account profiles, Keychain services,
+device identities, and encrypted local vaults. Verify them with `c6s channel` and
+`c6s-beta channel`.
+
 Without Homebrew:
 
 ```sh
@@ -30,7 +40,13 @@ published SHA-256 checksum before installing the executable.
 | Type | Token | Status |
 | --- | --- | --- |
 | Formula | [`c6s`](Formula/c6s.rb) | Apple Silicon macOS CLI |
+| Formula | [`c6s@beta`](Formula/c6s@beta.rb) | Concurrent CLI beta |
 | Cask | [`cerberus`](Casks/cerberus.rb) | Universal macOS 14+ native app |
+
+The native beta Cask token is reserved as `cerberus@beta`; it is published only when
+a distinct `Cerberus Beta.app` artifact passes Developer ID signing, notarization,
+login, upgrade, and uninstall checks. Local developers use the private desktop
+repository's `scripts/install-dev.sh` instead.
 
 Install the Developer ID-signed and Apple-notarized native app with:
 
