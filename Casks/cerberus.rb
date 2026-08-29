@@ -7,6 +7,12 @@ cask "cerberus" do
   desc "Native encrypted vault client for c6s"
   homepage "https://c6s.whitekiwi.link/"
 
+  livecheck do
+    url :url
+    regex(/^cerberus[._-]v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
+  end
+
   depends_on macos: :sonoma
 
   app "c6s.app", target: "Cerberus.app"
