@@ -1,4 +1,4 @@
-class C6sATBeta < Formula
+class C6sBeta < Formula
   desc "Beta channel of the agent-friendly c6s — Cerberus client"
   homepage "https://c6s.whitekiwi.link"
   url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.4.0-beta.1/c6s-beta_v0.4.0-beta.1_darwin_arm64.tar.gz"

@@ -36,9 +36,9 @@ jobs:
       - run: brew audit --strict --online c6shq/tap/c6s
       - run: brew install c6shq/tap/c6s
       - run: brew test c6shq/tap/c6s
-      - run: brew audit --strict --online c6shq/tap/c6s@beta
-      - run: brew install c6shq/tap/c6s@beta
-      - run: brew test c6shq/tap/c6s@beta
+      - run: brew audit --strict --online c6shq/tap/c6s-beta
+      - run: brew install c6shq/tap/c6s-beta
+      - run: brew test c6shq/tap/c6s-beta
       - run: brew audit --cask --strict --online c6shq/tap/cerberus
       - run: brew install --cask c6shq/tap/cerberus
       - run: codesign --verify --deep --strict --verbose=2 /Applications/Cerberus.app
