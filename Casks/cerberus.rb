@@ -1,6 +1,6 @@
 cask "cerberus" do
-  version "0.5.1"
-  sha256 "84c7e31107390eac3d3bf9a6688ccb63001b04b5b404344dd91e1d978774bbd4"
+  version "0.5.2"
+  sha256 "f4ad3a4e2eef7e44ed4ec1bc8406e3ed494d239bd8ced67a57df84bf1e9a4722"
 
   url "https://github.com/c6shq/homebrew-tap/releases/download/cerberus-v#{version}/Cerberus_#{version}_darwin_universal.zip"
   name "Cerberus"
@@ -15,7 +15,7 @@ cask "cerberus" do
 
   depends_on macos: :sonoma
 
-  app "c6s.app", target: "Cerberus.app"
+  app "Cerberus.app"
 
   zap trash: [
     "~/Library/Application Scripts/link.whitekiwi.c6s.desktop",
