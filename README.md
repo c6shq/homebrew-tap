@@ -81,3 +81,11 @@ gate so routine metadata edits do not consume the 10x-billed hosted macOS allowa
 
 See Homebrew's official [tap](https://docs.brew.sh/Taps), [Formula](https://docs.brew.sh/Formula-Cookbook),
 and [Cask](https://docs.brew.sh/Cask-Cookbook) documentation for the packaging model.
+
+## License
+
+The Formula, Cask, installer, and packaging metadata in this repository are
+available under the [MIT License](LICENSE). Downloaded c6s CLI and Cerberus app
+artifacts are proprietary and are explicitly excluded from that grant; see
+[NOTICE](NOTICE). Formulae therefore use Homebrew's `license :cannot_represent`
+marker for the downloaded software.

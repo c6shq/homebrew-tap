@@ -1,0 +1,14 @@
+c6shq/tap license boundary
+==========================
+
+The MIT License in this repository applies to the Formula, Cask, installer, and
+other packaging metadata stored in this repository.
+
+It does not apply to c6s CLI or Cerberus application binaries downloaded by that
+metadata. Those artifacts are proprietary software, remain copyright © 2026 Jihoon
+Jang (장지훈), and are governed by their own license notice and the c6s service terms
+at https://c6s.whitekiwi.link/terms/.
+
+Third-party components embedded in an artifact remain subject to their respective
+licenses and notices.
+
