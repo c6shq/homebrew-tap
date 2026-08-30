@@ -75,5 +75,9 @@ brew install c6shq/tap/c6s
 brew test c6shq/tap/c6s
 ```
 
+Tap syntax is checked on every push and pull request. The full macOS install,
+Gatekeeper, notarization, and executable test matrix is an explicit manual release
+gate so routine metadata edits do not consume the 10x-billed hosted macOS allowance.
+
 See Homebrew's official [tap](https://docs.brew.sh/Taps), [Formula](https://docs.brew.sh/Formula-Cookbook),
 and [Cask](https://docs.brew.sh/Cask-Cookbook) documentation for the packaging model.

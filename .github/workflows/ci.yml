@@ -25,7 +25,10 @@ jobs:
       - run: brew test-bot --only-tap-syntax
 
   packages:
-    if: github.event_name != 'pull_request'
+    # Formula/Cask downloads, Gatekeeper, and notarization checks are an explicit
+    # release gate. Running the 10x-billed macOS job for every metadata push burned
+    # the shared Actions allowance without adding coverage between releases.
+    if: github.event_name == 'workflow_dispatch'
     runs-on: macos-15
     timeout-minutes: 15
     steps:
