@@ -5,6 +5,12 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      verify-packages:
+        description: Install and verify all signed release packages on hosted macOS
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -28,7 +34,7 @@ jobs:
     # Formula/Cask downloads, Gatekeeper, and notarization checks are an explicit
     # release gate. Running the 10x-billed macOS job for every metadata push burned
     # the shared Actions allowance without adding coverage between releases.
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' && inputs.verify-packages == true
     runs-on: macos-15
     timeout-minutes: 15
     steps:
