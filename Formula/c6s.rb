@@ -1,9 +1,9 @@
 class C6s < Formula
   desc "Agent-friendly client for c6s — Cerberus"
   homepage "https://c6s.whitekiwi.link"
-  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.5.11/c6s_v0.5.11_darwin_arm64.tar.gz"
-  version "0.5.11"
-  sha256 "8aa1f61fecc93684bcd3e46ccafa75668acd924d109a4564c41c14caa3620853"
+  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.5.12/c6s_v0.5.12_darwin_arm64.tar.gz"
+  version "0.5.12"
+  sha256 "88bdd66db140363979f2bb5947a426825a1e68caabfc1775fda63ce7dced8cee"
   license :cannot_represent
   version_scheme 1
 
