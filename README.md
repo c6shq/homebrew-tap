@@ -10,7 +10,7 @@ release assets intended for distribution.
 ## Install the CLI
 
 ```sh
-brew install c6shq/tap/c6s
+brew install c6shq/tap/c6s-cli
 ```
 
 The fully qualified name makes Homebrew trust only the selected Formula. Upgrades and
@@ -70,9 +70,9 @@ builds here.
 
 ```sh
 brew style Formula/c6s.rb
-brew audit --strict --online c6shq/tap/c6s
-brew install c6shq/tap/c6s
-brew test c6shq/tap/c6s
+brew audit --strict --online c6shq/tap/c6s-cli
+brew install c6shq/tap/c6s-cli
+brew test c6shq/tap/c6s-cli
 ```
 
 Tap syntax is checked on every push and pull request. The full macOS install,
