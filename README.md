@@ -39,7 +39,7 @@ published SHA-256 checksum before installing the executable.
 
 | Type | Token | Status |
 | --- | --- | --- |
-| Formula | [`c6s`](Formula/c6s.rb) | Apple Silicon macOS CLI |
+| Formula | [`c6s-cli`](Formula/c6s-cli.rb) | Apple Silicon macOS CLI (`c6s`) |
 | Formula | [`c6s-beta`](Formula/c6s-beta.rb) | Concurrent CLI beta |
 | Cask | [`cerberus`](Casks/cerberus.rb) | Universal macOS 14+ native app |
 | Cask | [`cerberus@beta`](Casks/cerberus@beta.rb) | Concurrent macOS beta |
