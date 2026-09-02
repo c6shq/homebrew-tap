@@ -1,6 +1,6 @@
 cask "cerberus" do
-  version "0.6.10"
-  sha256 "d0fd6e1e126d85be510c4143a0edccccc05217ce69e4680b44d411e160744cce"
+  version "0.6.11"
+  sha256 "b87a8b967ea739209adf88760f7054162ecb22e8c431fea8cbfb574f8daca1c8"
 
   url "https://github.com/c6shq/homebrew-tap/releases/download/cerberus-v#{version}/Cerberus_#{version}_darwin_universal.zip"
   name "Cerberus"
