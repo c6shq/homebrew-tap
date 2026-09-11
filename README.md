@@ -14,7 +14,7 @@ brew install c6shq/tap/c6s-cli
 ```
 
 The fully qualified name makes Homebrew trust only the selected Formula. Upgrades and
-removal then use `brew upgrade c6s` and `brew uninstall c6s`.
+removal then use `brew upgrade c6s-cli` and `brew uninstall c6s-cli`.
 
 Install the concurrently usable pre-release CLI as `c6s-beta`:
 
@@ -32,7 +32,7 @@ Without Homebrew:
 curl -fsSL https://c6s.whitekiwi.link/install.sh | sh
 ```
 
-The current CLI supports Apple Silicon macOS. Both installation paths verify the
+The current CLI supports Apple Silicon macOS 14+. Both installation paths verify the
 published SHA-256 checksum before installing the executable.
 
 ## Packages
@@ -69,7 +69,7 @@ builds here.
 ## Development
 
 ```sh
-brew style Formula/c6s.rb
+brew style Formula/c6s-cli.rb
 brew audit --strict --online c6shq/tap/c6s-cli
 brew install c6shq/tap/c6s-cli
 brew test c6shq/tap/c6s-cli
@@ -85,7 +85,7 @@ and [Cask](https://docs.brew.sh/Cask-Cookbook) documentation for the packaging m
 ## License
 
 The Formula, Cask, installer, and packaging metadata in this repository are
-available under the [MIT License](LICENSE). Downloaded c6s CLI and Cerberus app
-artifacts are proprietary and are explicitly excluded from that grant; see
-[NOTICE](NOTICE). Formulae therefore use Homebrew's `license :cannot_represent`
-marker for the downloaded software.
+available under the [MIT License](LICENSE). Downloaded artifacts carry their own
+licenses rather than this tap's MIT grant; see [NOTICE](NOTICE). The current c6s CLI
+archive includes Apache-2.0, reflected by its Formula. Cerberus native app terms
+remain separate.

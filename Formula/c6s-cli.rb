@@ -1,14 +1,14 @@
 class C6sCli < Formula
   desc "Agent-friendly client for c6s — Cerberus"
   homepage "https://c6s.whitekiwi.link"
-  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.9.18/c6s_v0.9.18_darwin_arm64.tar.gz"
-  version "0.9.18"
-  sha256 "5ca7bbef13fc4fd9588d3330f06cc84387ff97ec99a1e24b65db8a03cfc99c53"
+  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.9.20/c6s_v0.9.20_darwin_arm64.tar.gz"
+  version "0.9.20"
+  sha256 "a89c8cc84572991ba80b3da1d50302246b36b441503e8532327657458d415627"
   license "Apache-2.0"
   version_scheme 1
 
   depends_on arch: :arm64
-  depends_on :macos
+  depends_on macos: :sonoma
 
   def install
     bin.install "c6s"
@@ -16,5 +16,6 @@ class C6sCli < Formula
 
   test do
     assert_match "c6s v#{version}", shell_output("#{bin}/c6s version")
+    assert_match "--resume", shell_output("#{bin}/c6s attachment upload --help")
   end
 end
