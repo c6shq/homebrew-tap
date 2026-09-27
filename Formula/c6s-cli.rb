@@ -22,7 +22,7 @@ class C6sCli < Formula
     assert_match "--item <local-item-id>", shell_output("#{bin}/c6s vault upload --help")
     assert_match "credential-store", shell_output("#{bin}/c6s doctor --help")
     assert_match "outputSuppressed", shell_output("#{bin}/c6s request execute --help")
-    assert_match "request_wait_*", shell_output("#{bin}/c6s request wait --help")
+    assert_match "typed wait diagnostics on stderr", shell_output("#{bin}/c6s request wait --help")
     assert_match "unknown command: agent", shell_output("#{bin}/c6s agent 2>&1", 2)
   end
 end
