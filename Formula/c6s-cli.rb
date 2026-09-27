@@ -1,9 +1,9 @@
 class C6sCli < Formula
   desc "Agent-friendly client for c6s — Cerberus"
   homepage "https://c6s.whitekiwi.link"
-  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.10.5/c6s_v0.10.5_darwin_arm64.tar.gz"
-  version "0.10.5"
-  sha256 "54c5291f50e8fd9e133d6cc740f9b80889d995bc340f6a18f31cf7dc0a05754d"
+  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.10.6/c6s_v0.10.6_darwin_arm64.tar.gz"
+  version "0.10.6"
+  sha256 "1222a5cb02f96125d346bbf09f4eb6dd394b055b57978ba209708ce244e4e848"
   license "Apache-2.0"
   version_scheme 1
 
@@ -22,6 +22,7 @@ class C6sCli < Formula
     assert_match "--item <local-item-id>", shell_output("#{bin}/c6s vault upload --help")
     assert_match "credential-store", shell_output("#{bin}/c6s doctor --help")
     assert_match "outputSuppressed", shell_output("#{bin}/c6s request execute --help")
+    assert_match "request_wait_*", shell_output("#{bin}/c6s request wait --help")
     assert_match "unknown command: agent", shell_output("#{bin}/c6s agent 2>&1", 2)
   end
 end
