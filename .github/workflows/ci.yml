@@ -42,9 +42,9 @@ jobs:
       - uses: Homebrew/actions/setup-homebrew@8f3d1ec8a696b3b9d9a6c3696b6c73033cab69e4 # 2026.08.14.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: brew audit --strict --online c6shq/tap/c6s
-      - run: brew install c6shq/tap/c6s
-      - run: brew test c6shq/tap/c6s
+      - run: brew audit --strict --online c6shq/tap/c6s-cli
+      - run: brew install c6shq/tap/c6s-cli
+      - run: brew test c6shq/tap/c6s-cli
       - run: brew audit --strict --online c6shq/tap/c6s-beta
       - run: brew install c6shq/tap/c6s-beta
       - run: brew test c6shq/tap/c6s-beta
