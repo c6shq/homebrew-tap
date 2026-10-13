@@ -7,7 +7,7 @@ The application source repositories remain private. This repository contains onl
 public Formula/Cask definitions, checksum manifests, installer scripts, and binary
 release assets intended for distribution.
 
-## Install the CLI
+## Install the CLI on macOS
 
 ```sh
 brew install c6shq/tap/c6s-cli
@@ -32,8 +32,52 @@ Without Homebrew:
 curl -fsSL https://c6s.whitekiwi.link/install.sh | sh
 ```
 
-The current CLI supports Apple Silicon macOS 14+. Both installation paths verify the
+The macOS CLI supports Apple Silicon macOS 14+. Both installation paths verify the
 published SHA-256 checksum before installing the executable.
+
+## Install the CLI on Ubuntu x86_64 (preview)
+
+Use your normal Ubuntu GNOME desktop session and an already unlocked persistent
+default keyring. Install the prerequisites, then run the installer as your normal
+user:
+
+```sh
+sudo apt install curl ca-certificates python3 openssh-client
+curl -fsSL https://github.com/c6shq/homebrew-tap/releases/download/c6s-linux-latest/install-linux.sh | sh
+export PATH="$HOME/.local/bin:$PATH"
+c6s version
+c6s channel
+c6s protocol verify
+c6s doctor --json
+```
+
+The installer authenticates the checksum manifest with a pinned publisher SSH
+key, checks the archive SHA-256 and Linux x86_64 executable identity, and atomically
+installs to `~/.local/bin/c6s`. It refuses symlink destinations and does not edit
+shell startup, account or vault configuration. Add the PATH line to your shell
+configuration if needed. Notices are installed under
+`${XDG_DATA_HOME:-$HOME/.local/share}/c6s/c6s`.
+
+To pin a version:
+
+```sh
+curl -fsSL https://github.com/c6shq/homebrew-tap/releases/download/c6s-linux-v0.11.5/install-linux.sh -o install-linux.sh
+C6S_VERSION=v0.11.5 sh install-linux.sh
+```
+
+The [immutable Linux preview release](https://github.com/c6shq/homebrew-tap/releases/tag/c6s-linux-v0.11.5)
+includes the archive, SBOM, installer, publisher public key, checksums, provenance
+and signatures. The publisher key fingerprint is
+`SHA256:Esv3OhmqQzqPeWRzSiHlnxmaq/3KWXMtjzte/2n2TIs`.
+
+Linux uses the existing `stable` CLI channel and production server. Its credential
+adapter uses exportable software keys in the existing Secret Service, with no
+hardware or biometric protection. Headless SSH/container sessions without that
+service cannot perform credential operations. The preview does not complete
+live-account/approval acceptance or the supported Ubuntu-version matrix. No Linux
+ARM64 package is published. See the [English](https://docs.c6s.whitekiwi.link/install/cli)
+or [Korean](https://docs.c6s.whitekiwi.link/ko/install/cli) guide for session
+requirements and diagnostics.
 
 ## Packages
 
@@ -65,6 +109,11 @@ Each public `c6s-v*` release must be a byte-for-byte mirror of the private, revi
 `c6shq/c6s-cli` archive, `checksums.txt`, and `install.sh`. Never publish source
 archives, credentials, internal configuration, workflow artifacts, or unreleased
 builds here.
+
+Linux preview assets use separate `c6s-linux-v*` immutable releases and the
+`c6s-linux-latest` alias. Mirror all eight qualified files and verify both SSH
+signatures and every downloaded byte. Do not replace the macOS `c6s-latest` alias
+or its Formula when publishing a Linux preview.
 
 ## Development
 
