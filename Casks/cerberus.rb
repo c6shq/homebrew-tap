@@ -1,11 +1,11 @@
 cask "cerberus" do
-  version "0.7.4"
-  sha256 "615bdb4389ca1da65f0288708a809d6ae32ff9d99d5bef05ebedbbec65842cb8"
+  version "0.7.5"
+  sha256 "49840ed5efd13847e7ede1b6425703f418a71eb9f3362feae5f9ab74065b8ea6"
 
   url "https://github.com/c6shq/homebrew-tap/releases/download/cerberus-v#{version}/Cerberus_#{version}_darwin_universal.zip"
   name "Cerberus"
   desc "Native encrypted vault client for c6s"
-  homepage "https://c6s.whitekiwi.link/"
+  homepage "https://c6s.app/"
 
   livecheck do
     url :url
