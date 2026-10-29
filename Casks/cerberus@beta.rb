@@ -5,12 +5,11 @@ cask "cerberus@beta" do
   url "https://github.com/c6shq/homebrew-tap/releases/download/cerberus-beta-v#{version}/Cerberus-Beta_#{version}_darwin_universal.zip"
   name "Cerberus Beta"
   desc "Concurrent beta of the native encrypted vault client for c6s"
-  homepage "https://c6s.whitekiwi.link/"
+  homepage "https://c6s.app/"
 
   livecheck do
-    url :url
+    url "https://github.com/c6shq/homebrew-tap.git"
     regex(/^cerberus-beta[._-]v?(.+)$/i)
-    strategy :github_releases
   end
 
   depends_on macos: :sonoma

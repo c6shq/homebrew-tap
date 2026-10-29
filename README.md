@@ -1,7 +1,7 @@
 # c6shq/tap
 
 Public Homebrew distribution metadata and reviewed binary releases for
-[c6s — Cerberus](https://c6s.whitekiwi.link).
+[c6s — Cerberus](https://c6s.app).
 
 The application source repositories remain private. This repository contains only
 public Formula/Cask definitions, checksum manifests, installer scripts, and binary
@@ -29,7 +29,7 @@ device identities, and encrypted local vaults. Verify them with `c6s channel` an
 Without Homebrew:
 
 ```sh
-curl -fsSL https://c6s.whitekiwi.link/install.sh | sh
+curl -fsSL https://c6s.app/install.sh | sh
 ```
 
 The macOS CLI supports Apple Silicon macOS 14+. Both installation paths verify the
@@ -75,8 +75,8 @@ adapter uses exportable software keys in the existing Secret Service, with no
 hardware or biometric protection. Headless SSH/container sessions without that
 service cannot perform credential operations. The preview does not complete
 live-account/approval acceptance or the supported Ubuntu-version matrix. No Linux
-ARM64 package is published. See the [English](https://docs.c6s.whitekiwi.link/install/cli)
-or [Korean](https://docs.c6s.whitekiwi.link/ko/install/cli) guide for session
+ARM64 package is published. See the [English](https://docs.c6s.app/install/cli)
+or [Korean](https://docs.c6s.app/ko/install/cli) guide for session
 requirements and diagnostics.
 
 ## Packages
