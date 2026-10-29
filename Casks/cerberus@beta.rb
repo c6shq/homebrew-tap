@@ -8,9 +8,8 @@ cask "cerberus@beta" do
   homepage "https://c6s.app/"
 
   livecheck do
-    url :url
+    url "https://github.com/c6shq/homebrew-tap.git"
     regex(/^cerberus-beta[._-]v?(.+)$/i)
-    strategy :github_releases
   end
 
   depends_on macos: :sonoma
