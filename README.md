@@ -61,11 +61,11 @@ configuration if needed. Notices are installed under
 To pin a version:
 
 ```sh
-curl -fsSL https://github.com/c6shq/homebrew-tap/releases/download/c6s-linux-v0.11.5/install-linux.sh -o install-linux.sh
-C6S_VERSION=v0.11.5 sh install-linux.sh
+curl -fsSL https://github.com/c6shq/homebrew-tap/releases/download/c6s-linux-v0.11.7/install-linux.sh -o install-linux.sh
+C6S_VERSION=v0.11.7 sh install-linux.sh
 ```
 
-The [immutable Linux preview release](https://github.com/c6shq/homebrew-tap/releases/tag/c6s-linux-v0.11.5)
+The [immutable Linux preview release](https://github.com/c6shq/homebrew-tap/releases/tag/c6s-linux-v0.11.7)
 includes the archive, SBOM, installer, publisher public key, checksums, provenance
 and signatures. The publisher key fingerprint is
 `SHA256:Esv3OhmqQzqPeWRzSiHlnxmaq/3KWXMtjzte/2n2TIs`.
