@@ -1,6 +1,6 @@
 class C6sCli < Formula
   desc "Agent-friendly client for c6s — Cerberus"
-  homepage "https://c6s.whitekiwi.link"
+  homepage "https://c6s.app/"
   url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.11.6/c6s_v0.11.6_darwin_arm64.tar.gz"
   version "0.11.6"
   sha256 "dc7d249d02bcbfa9aa436beb55602b3c046e4901e87ef3609bb3a6985724d847"
