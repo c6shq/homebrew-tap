@@ -1,9 +1,9 @@
 class C6sCli < Formula
   desc "Agent-friendly client for c6s — Cerberus"
   homepage "https://c6s.app/"
-  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.11.8/c6s_v0.11.8_darwin_arm64.tar.gz"
-  version "0.11.8"
-  sha256 "e0145bb786ba81d4183b2612c9b301c38ef07278cbc723afb723c209e6d2873a"
+  url "https://github.com/c6shq/homebrew-tap/releases/download/c6s-v0.11.9/c6s_v0.11.9_darwin_arm64.tar.gz"
+  version "0.11.9"
+  sha256 "fbe3419d33e9a53f5a28c00e61bc84e97b2320d9fe5ed782026e2a0e1f0ddb9a"
   license "Apache-2.0"
   version_scheme 1
 
@@ -16,6 +16,7 @@ class C6sCli < Formula
 
   test do
     assert_match "c6s v#{version}", shell_output("#{bin}/c6s version")
+    assert_match "--remote [--title <title>] [--kind <kind>]", shell_output("#{bin}/c6s item edit --help")
     assert_match "--resume", shell_output("#{bin}/c6s attachment upload --help")
     assert_match "--revision", shell_output("#{bin}/c6s attachment policy --help")
     assert_match "--resume", shell_output("#{bin}/c6s attachment policy --help")
